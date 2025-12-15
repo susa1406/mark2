@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" />
+    
   </head>
   <body>
-    <nav>
-        <h1 class="glow">PORTFOLIO</h1>
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#skill">SKILLS</a></li>
-          <li><a href="#project">PROJECTS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
+    <nav class="navbar">
+      <h1 class="glow">PORTFOLIO</h1>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skill">SKILLS</a></li>
+        <li><a href="#project">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
     <section id="hero">
-      
+
       <div class="card1">
-        <img
-          src="images/me.png"
-          alt="My Photo"
-        />
+        <img src="images/me.png" alt="My Photo" />
         <p>
           Hi, I'm Susa. <br /><br />
           A beginner web developer learning HTML, CSS & JavaScript. I create
@@ -54,19 +53,13 @@
       <div class="procont">
         <div class="pro">
           <h5>Project 1</h5>
-          <img
-            src="images/p1.jpg"
-            alt="Screen short"
-          />
+          <img src="images/p1.jpg" alt="Screen short" />
           <p>Mini Portfolio</p>
           <a href="">View Live</a>
         </div>
         <div class="pro">
           <h5>Project 2</h5>
-          <img
-            src="images/p2.jpg"
-            alt="Screen short"
-          />
+          <img src="images/p2.jpg" alt="Screen short" />
           <p>Student Portfolio</p>
           <a href="">View Live</a>
         </div>
@@ -81,10 +74,21 @@
     <section id="contact">
       <h2>CONTACT</h2>
       <div class="footer">
-      <a href="" target="_blank"> <img src="images/github.jpg" alt="github image" /><p>Github</p></a>
-      <a href="" target="_blank"> <img src="images/email.jpg" alt="email image" /><p>Email</p></a>
+        <a href="" target="_blank">
+          <img src="images/github.jpg" alt="github image" />
+          <p>Github</p></a
+        >
+        <a href="" target="_blank">
+          <img src="images/email.jpg" alt="email image" />
+          <p>Email</p></a
+        >
       </div>
       <p id="rights">© 2025 Susa. All Rights Reserved.</p>
     </section>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
